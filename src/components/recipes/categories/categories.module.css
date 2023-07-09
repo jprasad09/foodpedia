@@ -1,0 +1,26 @@
+.categories{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.category{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1.5px solid rgb(182, 180, 180);
+    border-radius: 45px;
+    padding: 7px 5px;
+    column-gap: 7px;
+    cursor: pointer;
+}
+
+.category h1{
+    font-size: 17px;
+    color: gray;
+}
+
+.category img{
+    width: 50px;
+    border-radius: 50%;
+}
