@@ -1,0 +1,96 @@
+.topbar{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.divContainer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #d3d3d3;
+    background-image: linear-gradient(315deg, #757373 0%, #364452 74%);
+    border-radius: 40px;
+    padding: 50px 40px 0;
+}
+
+.textContainer1{
+    display: flex;
+    flex-direction: column;
+}
+
+.textContainer1 h3{
+    font-size: 45px;
+    color: white;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.textContainer1 p{
+    font-size: 17px;
+    color: rgb(207, 201, 201);
+    margin: 25px 0;
+}
+
+.textContainer1 button{
+    width: fit-content;
+    outline: none;
+    background-color: white;
+    color: rgb(56, 54, 54);
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: 1px solid rgb(172, 164, 164);
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.recipesHomeContainer{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipesHomeContainer img{
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.recipesHomeContainer span{
+    color: white;
+    font-size: 18px;
+}
+
+.chefImg{
+    height: 500px;
+}
+
+.textContainer2{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    align-self: center;
+}
+
+.textContainer2 h5{
+    font-size: 25px;
+    color: white;
+    line-height: 1.2;
+}
+
+.textContainer2 p{
+    font-size: 17px;
+    color: rgb(228, 223, 223);
+}
+
+.textContainer2 button{
+    width: fit-content;
+    outline: none;
+    background-color: white;
+    color: rgb(56, 54, 54);
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: 1px solid rgb(172, 164, 164);
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+}

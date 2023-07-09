@@ -1,0 +1,57 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.navbar h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.navbar h1 img{
+    height: 50px;
+}
+
+.menuList{
+    list-style: none;
+    display: flex;
+    column-gap: 50px;
+}
+
+.navLink{
+    text-decoration: none;
+    color: rgb(59, 57, 57);
+    font-size: 18px;
+    transition: 0.3s;
+}
+.navLink:hover{
+    color: rgb(43, 41, 41);
+    font-weight: bold;
+}
+
+.activeNavLink{
+    color: rgb(87, 83, 83);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.loginBtn{
+    outline: none;
+    background-color: white;
+    padding: 7px 20px;
+    border-radius: 25px;
+    border: 1px solid rgb(172, 164, 164);
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.loginBtn:hover{
+    box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.75);
+}
