@@ -1,0 +1,13 @@
+.recipeList{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 100px;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.notfound{
+    font-size: 25px;
+    color: gray;
+}

@@ -13,11 +13,16 @@
     padding: 7px 5px;
     column-gap: 7px;
     cursor: pointer;
+    color: gray;
+}
+
+.activeCat{
+    background-color: #374453;
+    color: white;
 }
 
 .category h1{
     font-size: 17px;
-    color: gray;
 }
 
 .category img{

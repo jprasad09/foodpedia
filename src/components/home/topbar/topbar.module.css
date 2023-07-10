@@ -1,7 +1,6 @@
 .topbar{
     display: flex;
     flex-direction: column;
-    margin: 0 20px;
 }
 
 .divContainer{
@@ -11,6 +10,7 @@
     background-image: linear-gradient(315deg, #757373 0%, #364452 74%);
     border-radius: 40px;
     padding: 50px 40px 0;
+    margin: 0 20px;
 }
 
 .textContainer1{

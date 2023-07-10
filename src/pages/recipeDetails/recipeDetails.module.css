@@ -1,0 +1,22 @@
+.recipeDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #faeef0;
+}
+
+.recipeName{
+    border-top: 2px solid rgb(187, 181, 181);
+    padding-top: 20px;
+    text-align: center;
+    margin: 5px 20px 30px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.instructionsAndIngredientsContainer{
+    padding: 0 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 100px;
+}

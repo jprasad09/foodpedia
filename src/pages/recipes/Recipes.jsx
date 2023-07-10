@@ -3,6 +3,7 @@ import styles from './recipes.module.css'
 import Navbar from '../../components/navbar/Navbar'
 import SearchForm from '../../components/recipes/searchForm/SearchForm'
 import Categories from '../../components/recipes/categories/Categories'
+import RecipeList from '../../components/recipes/recipeList/RecipeList'
 
 const Recipes = () => {
   return (
@@ -11,7 +12,7 @@ const Recipes = () => {
       <SearchForm />
       <div className={styles.contentContainer}>
         <Categories />
-        <div></div>
+        <RecipeList />
       </div>
     </section>
   )

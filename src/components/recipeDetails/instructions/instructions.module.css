@@ -1,0 +1,59 @@
+.instructions{
+    margin: 30px 70px 10px;
+}
+
+.instructions h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.singleInsContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.onlyInsContainer{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+
+.onlyInsContainer span{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(187, 181, 181);
+}
+
+.onlyInsContainer p{
+    color: rgb(66, 66, 66);
+    font-weight: 600;
+}
+
+.borderLeft{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-left: 2px dotted rgb(187, 181, 181);
+    left: 24px;
+}
+
+.lastBtn{
+    padding: 10px 30px;
+    background-color: gray;
+    color: white;
+    width: fit-content;
+    font-weight: 700;
+}

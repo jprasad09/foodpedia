@@ -1,0 +1,40 @@
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.ingredients h3{
+    padding: 30px 50px 30px;
+    text-align: center;
+    font-size: 25px;
+    background-color: #374453;
+    border-radius: 15px 15px 0 0;
+    color: white;
+}
+
+.divContainer{
+    padding: 0 50px 50px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.ingredient{
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.measure{
+    font-size: 17px;
+    color: gray;
+    font-weight: 700;
+}

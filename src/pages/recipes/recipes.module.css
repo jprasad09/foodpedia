@@ -1,11 +1,11 @@
 .recipesContainer{
     background-color: #faeef0;
-    padding: 0 20px;
 }
 
 .contentContainer{
     margin-top: 25px;
+    padding: 0 20px;
     padding-bottom: 25px;
     display: flex;
-    column-gap: 30px;
+    column-gap: 120px;
 }
