@@ -4,13 +4,29 @@
     background-color: #faeef0;
 }
 
-.recipeName{
+.nameAndBookmarkContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
     border-top: 2px solid rgb(187, 181, 181);
-    padding-top: 20px;
-    text-align: center;
     margin: 5px 20px 30px;
+    padding-top: 20px;
+}
+
+.recipeName{
     font-size: 30px;
     font-weight: 800;
+}
+
+.bookmark{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.bookmarkDisabled{
+    color: rgb(146, 145, 145);
+    font-size: 25px;
 }
 
 .instructionsAndIngredientsContainer{

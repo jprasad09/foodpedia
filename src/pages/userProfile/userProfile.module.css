@@ -1,0 +1,45 @@
+.userProfileContainer{
+    background-color: #faeef0;
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+.contentContainer{
+    margin: 5px 20px 0;
+    border-top: 2px solid rgb(187, 181, 181);
+    padding-top: 20px;
+}
+
+.userEmail{
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.recipesContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.recipesContainer .heading{
+    font-size: 25px;
+    align-self: flex-start;
+    color: rgb(65, 62, 62);
+    font-weight: 700;
+}
+
+.recipeCardsContainer{
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 100px;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.signinMsg{
+    margin-top: 100px;
+    text-align: center;
+}

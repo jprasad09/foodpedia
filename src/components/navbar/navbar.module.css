@@ -40,6 +40,11 @@
     font-weight: bold;
 }
 
+.profileContainer{
+    display: flex;
+    column-gap: 10px;
+}
+
 .loginBtn{
     outline: none;
     background-color: white;

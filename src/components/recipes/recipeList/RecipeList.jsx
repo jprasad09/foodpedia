@@ -18,7 +18,7 @@ const RecipeList = () => {
     <main className={styles.recipeList}>
       { recipes ? 
         recipes?.map(({ idMeal, strMeal, strMealThumb }) => {
-          return <RecipeCard key={idMeal} name={strMeal} image={strMealThumb} id={idMeal} />
+          return <RecipeCard key={idMeal} name={strMeal} image={strMealThumb} recipeId={idMeal} />
         }) 
         : 
         <h3 className={styles.notfound}>Not Found!</h3>

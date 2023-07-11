@@ -1,13 +1,13 @@
 .recipeCard{
     display: flex;
     row-gap: 13px;
-    padding: 10px 10px 10px 60px;
+    padding: 5px 10px 5px 60px;
     justify-content: center;
     flex-direction: column;
     background-color: #374453;
     border-radius: 35px;
     position: relative;
-    height: 130px;
+    height: 140px;
     width: 350px;
 }
 
@@ -53,4 +53,9 @@
     color: white;
     font-size: 25px;
     cursor: pointer;
+}
+
+.bookmarkDisabled{
+    color: rgb(95, 93, 93);
+    font-size: 25px;
 }
