@@ -1,7 +1,15 @@
+.loader{
+    text-align: center;
+    padding-top: 100px;
+    background-color: #faeef0;
+    min-height: 100vh;
+}
+
 .recipeDetailsContainer{
     display: flex;
     flex-direction: column;
     background-color: #faeef0;
+    min-height: 100vh;
 }
 
 .nameAndBookmarkContainer{
@@ -29,10 +37,34 @@
     font-size: 25px;
 }
 
-.instructionsAndIngredientsContainer{
+.imageAndIngredientsContainer{
     padding: 0 20px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     column-gap: 100px;
 }
+
+@media only screen and (max-width: 800px) {
+    .imageAndIngredientsContainer{
+        padding: 0 10px;
+        column-gap: 10px;
+    }
+}
+@media only screen and (max-width: 510px) {
+    .imageAndIngredientsContainer{
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+    }
+    .recipeName{
+        font-size: 20px;
+    }
+    .bookmark{
+        font-size: 20px;
+    }
+    .bookmarkDisabled{
+        font-size: 20px;
+    }
+}
+

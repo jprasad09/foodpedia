@@ -5,12 +5,14 @@
 
 .divContainer{
     display: flex;
+    column-gap: 30px;
     justify-content: space-between;
     background-color: #d3d3d3;
     background-image: linear-gradient(315deg, #757373 0%, #364452 74%);
     border-radius: 40px;
     padding: 50px 40px 0;
-    margin: 0 20px;
+    margin: 0 20px 20px;
+    position: relative;
 }
 
 .textContainer1{
@@ -45,7 +47,7 @@
 }
 
 .recipesHomeContainer{
-    margin-top: 100px;
+    margin: 100px 20px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -62,6 +64,9 @@
 
 .chefImg{
     height: 500px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
 }
 
 .textContainer2{
@@ -93,4 +98,65 @@
     font-size: 17px;
     font-weight: 800;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1075px) {
+    .textContainer1 h3{
+        font-size: 40px;
+    }
+    .chefImg{
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .divContainer{
+        padding: 50px 20px 0;
+    }
+    .textContainer1 h3{
+        font-size: 30px;
+    }
+    .chefImg{
+        height: 300px;
+    }
+    .textContainer1 p{
+        font-size: 15px;
+        margin: 25px 10px;
+        max-width: 300px;
+    }
+    .textContainer2{
+        align-self: flex-start;
+    }
+    .textContainer2 h5{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .chefImg{
+        height: 250px;
+        left: 60%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .divContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .chefImg{
+        display: none;
+    }
+    .recipesHomeContainer{
+        margin: 50px;
+        margin-left: 0;
+    }
+    .textContainer1 p{
+        margin: 25px 0;
+    }
+    .textContainer2{
+        display: none;
+    }
 }

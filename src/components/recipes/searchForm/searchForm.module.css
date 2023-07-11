@@ -49,3 +49,44 @@
     font-weight: 700;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 750px) {
+    .searchForm h1{
+        font-size: 30px;
+    }
+    .searchInputContainer{
+        column-gap: 5px;
+    }
+    .searchInputContainer input{
+        min-width: 200px;
+        max-width: 300px;
+        font-size: 15px;
+        padding: 0px 10px 0 40px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .searchForm h1{
+        font-size: 20px;
+    }
+    .searchInputContainer input{
+        min-width: 180px;
+        max-width: 180px;
+        font-size: 12px;
+        padding: 0px 10px 0 30px;
+    }
+    .searchIcon{
+        left: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .searchForm{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .searchInputContainer input{
+        min-width: 170px;
+        max-width: 170px;
+    }
+}

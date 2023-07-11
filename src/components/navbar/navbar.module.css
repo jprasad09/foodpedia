@@ -60,3 +60,59 @@
 .loginBtn:hover{
     box-shadow: 2px 2px 20px -10px rgba(0, 0, 0, 0.75);
 }
+
+
+@media only screen and (max-width: 650px) {
+    .navbar h1{
+        font-size: 20px;
+    }
+    .navbar h1 img{
+        height: 30px;
+    }
+    .menuList{
+        column-gap: 20px;
+    }
+    .navLink{
+        font-size: 15px;
+    }
+    .activeNavLink{
+        font-size: 15px;
+    }
+    .loginBtn{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .navbar h1{
+        font-size: 15px;
+    }
+    .navbar h1 img{
+        height: 20px;
+    }
+    .menuList{
+        column-gap: 15px;
+    }
+    .navLink{
+        font-size: 13px;
+    }
+    .activeNavLink{
+        font-size: 13px;
+    }
+    .loginBtn{
+        padding: 5px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .menuList{
+        column-gap: 10px;
+    }
+    .loginBtn{
+        padding: 2px;
+        font-size: 10px;
+        font-weight: 600;
+    }
+}

@@ -38,3 +38,22 @@
     color: gray;
     font-weight: 700;
 }
+
+@media only screen and (max-width: 900px) {
+    .divContainer{
+        padding: 0 10px 50px;
+        display: flex;
+        column-gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .ingredient{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .measure{
+        font-size: 14px;
+        font-weight: 700;
+    }
+}

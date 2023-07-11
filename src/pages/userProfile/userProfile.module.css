@@ -39,7 +39,28 @@
     justify-content: center;
 }
 
+.notfound{
+    color: rgb(65, 62, 62);
+    font-size: 30px;
+}
+
 .signinMsg{
     margin-top: 100px;
     text-align: center;
+}
+
+@media only screen and (max-width: 420px) {
+    .contentContainer{
+        margin: 5px 5px 0;
+    }
+    .userEmail{
+        font-size: 25px;
+    }
+    .recipesContainer .heading{
+        font-size: 20px;
+    }
+    .recipeCardsContainer{
+        padding: 0 10px;
+    }
+    
 }

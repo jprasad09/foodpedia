@@ -29,3 +29,24 @@
     width: 50px;
     border-radius: 50%;
 }
+
+@media only screen and (max-width: 750px) {
+    .category h1{
+        font-size: 15px;
+    }
+    .category img{
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .categories{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+    }
+}
+

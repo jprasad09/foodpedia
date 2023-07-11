@@ -10,15 +10,16 @@ import { fetchRecipesById } from '../../store/recipeSlice'
 import { BsBookmarkPlus, BsBookmarkCheckFill } from 'react-icons/bs'
 import { useAuth0 } from "@auth0/auth0-react"
 import { saveRecipe, deleteRecipe } from '../../utils/recipeFuncs'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { MagnifyingGlass } from 'react-loader-spinner'
+import { SINGLE_RECIPE_STATUSES } from '../../store/recipeSlice'
 
 const RecipeDetails = () => {
 
   const dispatch = useDispatch()
 
-  const { singleRecipe } = useSelector((state) => state.recipe)
+  const { singleRecipe, singleRecipeStatus } = useSelector((state) => state.recipe)
   const { idMeal: recipeId, strMeal: name, strMealThumb: image } = singleRecipe
 
   const [ status, setStatus ] = useState(false)
@@ -51,12 +52,18 @@ const RecipeDetails = () => {
     toast.info("Recipe removed successfully")
   }
 
+  if(singleRecipeStatus === SINGLE_RECIPE_STATUSES.LOADING){
+    return <div className={styles.loader}>
+        <MagnifyingGlass glassColor = 'white' color = 'black'/>
+      </div>
+  }
+
   return (
     <section className={styles.recipeDetailsContainer}>
-        <ToastContainer 
-          position="top-center"
-          autoClose={2000}
-        />
+      <ToastContainer 
+        position="top-center"
+        autoClose={2000}
+      />
       <Navbar />
       <div className={styles.nameAndBookmarkContainer}>
         <h1 className={styles.recipeName} >{name}</h1>
@@ -67,7 +74,7 @@ const RecipeDetails = () => {
           <BsBookmarkPlus onClick={() => toast.warn("Login to save recipe")} className={styles.bookmarkDisabled}/>
         }
       </div>
-      <div className={styles.instructionsAndIngredientsContainer}>
+      <div className={styles.imageAndIngredientsContainer}>
         <ImageSection />
         <Ingredients />
       </div>

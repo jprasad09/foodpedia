@@ -5,9 +5,29 @@
     column-gap: 100px;
     align-content: flex-start;
     justify-content: center;
+    border-left: 2px solid rgb(187, 181, 181);
+    padding-left: 50px;
 }
 
 .notfound{
     font-size: 25px;
     color: gray;
 }
+
+@media only screen and (max-width: 1130px) {
+    .recipeList{
+        column-gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .recipeList{
+        column-gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .recipeList{
+        border-left: none;
+    }
+    }

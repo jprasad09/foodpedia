@@ -19,7 +19,7 @@ const UserProfile = () => {
         isAuthenticated ? 
         
         <div className={styles.contentContainer}>
-          <h1 className={styles.userEmail}>Hey {user?.email}!</h1>
+          <h1 className={styles.userEmail}>Hey {user?.nickname}!</h1>
           <div className={styles.recipesContainer}>
             <h3 className={styles.heading}>Saved Recipies</h3>
             <div className={styles.recipeCardsContainer}>
@@ -28,7 +28,7 @@ const UserProfile = () => {
                 return <RecipeCard key={recipeId} name={name} image={image} recipeId={recipeId} />
               }) 
               : 
-              <h3 className={styles.notfound}>Not Found!</h3>
+              <h3 className={styles.notfound}>No saved recipes</h3>
             }
             </div>
           </div>

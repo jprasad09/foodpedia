@@ -59,3 +59,45 @@
     color: rgb(95, 93, 93);
     font-size: 25px;
 }
+
+@media only screen and (max-width: 1075px) {
+    .recipeCard{
+        width: 300px;
+    }
+    .recipeCard h3{
+        font-size: 17px;
+    }
+    .buttonContainer{
+        column-gap: 30px;
+    }
+    .firstContainer{
+        padding-right: 30px;
+    }
+    .firstContainer button{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .recipeCard img{
+        left: -11%;
+        top: 25%;
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .recipeCard{
+        width: 250px;
+    }
+    .recipeCard h3{
+        font-size: 15px;
+    }
+    .buttonContainer{
+        column-gap: 20px;
+    }
+    .firstContainer{
+        padding-right: 20px;
+    }
+}

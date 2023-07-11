@@ -57,7 +57,7 @@
 }
 
 .categoryAndCuisineDivContainer{
-    padding: 40px 20px 10px;
+    padding: 30px 20px 10px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -79,4 +79,22 @@
     color: black;
     font-size: 20px;
     font-weight: 600;
+}
+
+@media only screen and (max-width: 800px) {
+    .imageSection img{
+        height: 180px;
+        width: 250px;
+    }
+    .categoryAndCuisineDivContainer{
+        padding: 30px 5px 10px;
+    }
+    .span1{
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .span2{
+        font-size: 15px;
+        font-weight: 600;
+    }
 }
