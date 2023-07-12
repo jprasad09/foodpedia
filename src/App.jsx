@@ -3,8 +3,8 @@ import { Provider } from "react-redux"
 
 import Home from './pages/home/Home'
 import Recipes from './pages/recipes/Recipes'
-import RecipeDetails from './pages/recipeDetails/recipeDetails'
-import UserProfile from './pages/userProfile/userProfile'
+import RecipeDetails from './pages/recipeDetails/RecipeDetails'
+import UserProfile from './pages/userProfile/UserProfile'
 import store from "./store"
 
 function App() {
