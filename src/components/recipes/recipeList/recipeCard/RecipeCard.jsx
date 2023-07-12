@@ -3,12 +3,15 @@ import { BsBookmarkPlus, BsBookmarkCheckFill } from 'react-icons/bs'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import styles from './recipeCard.module.css'
 import { fetchRecipesById } from '../../../../store/recipeSlice'
 import { saveRecipe, deleteRecipe } from '../../../../utils/recipeFuncs'
+import placeholderImg from '../../../../assets/placeholderImgCard.jpg'
 
 const RecipeCard = ({ recipeId, name, image }) => {
   
@@ -57,7 +60,7 @@ const RecipeCard = ({ recipeId, name, image }) => {
           position="top-center"
           autoClose={2000}
         />
-        <img src={image} alt="Recipe" loading='lazy'/>
+        <LazyLoadImage src={image} alt="Recipe" placeholderSrc={placeholderImg} effect="blur" />
         <h3>{name}</h3>
         <div className={styles.buttonContainer}>
             <div className={styles.firstContainer}>

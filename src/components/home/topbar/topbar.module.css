@@ -62,11 +62,20 @@
     font-size: 18px;
 }
 
-.chefImg{
-    height: 500px;
+.lazyImgDiv{
     position: absolute;
     bottom: 0;
     left: 40%;
+}
+
+.lazyImgDiv span{
+    position: absolute;
+}
+
+.chefImg{
+    position: absolute;
+    bottom: -10%;
+    height: 500px;
 }
 
 .textContainer2{
@@ -134,9 +143,11 @@
 }
 
 @media only screen and (max-width: 650px) {
+    .lazyImgDiv{
+        left: 60%;
+    }
     .chefImg{
         height: 250px;
-        left: 60%;
     }
 }
 

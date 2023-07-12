@@ -1,9 +1,12 @@
 import React from 'react'
 import { NavLink, useNavigate } from "react-router-dom"
 import { useAuth0 } from "@auth0/auth0-react"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 import styles from './navbar.module.css'
 import logo from '../../assets/logo.png'
+import placeholderLogo from '../../assets/placeholderLogo.png'
 
 const Navbar = () => {
 
@@ -13,7 +16,10 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-        <h1> <img src={logo} alt="Logo" />Foodpedia.</h1>
+        <h1>
+          <LazyLoadImage src={logo} alt="Logo" effect="blur" placeholderSrc={placeholderLogo}/>
+          Foodpedia.
+        </h1>
         <ul className={styles.menuList}>
             <li><NavLink className={(navData) => navData.isActive ? styles.activeNavLink : styles.navLink} to="/">Home</NavLink></li>
             <li><NavLink className={(navData) => navData.isActive ? styles.activeNavLink : styles.navLink} to="/recipes">Recipes</NavLink></li>

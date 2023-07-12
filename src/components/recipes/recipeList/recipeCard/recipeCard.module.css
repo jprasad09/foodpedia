@@ -11,10 +11,13 @@
     width: 350px;
 }
 
-.recipeCard img{
+.recipeCard span{
     position: absolute;
     left: -11%;
     top: 20%;
+}
+
+.recipeCard img{
     height: 85px;
     width: 85px;
     border-radius: 50%;
@@ -79,9 +82,13 @@
 }
 
 @media only screen and (max-width: 975px) {
-    .recipeCard img{
+    .recipeCard span{
+        position: absolute;
         left: -11%;
         top: 25%;
+    }
+    
+    .recipeCard img{
         height: 70px;
         width: 70px;
     }

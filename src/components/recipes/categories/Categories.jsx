@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 import styles from './categories.module.css'
 import { fetchRecipesByCategory } from '../../../store/recipeSlice'
 import { fetchCategories } from '../../../store/categorySlice'
+import placeholderImgCard from '../../../assets/placeholderImgCard.jpg'
 
 const Categories = () => {
 
@@ -46,7 +49,7 @@ const Categories = () => {
 const Category = ({ id, name, image, active }) => {
     return (
         <div className={ id===active ? `${styles.category} ${styles.activeCat}` : `${styles.category}`}>
-            <img src={image} alt="Category" />
+            <LazyLoadImage src={image} alt="Category" effect="blur" placeholderSrc={placeholderImgCard}/>
             <h1>{name}</h1>
         </div>
     )

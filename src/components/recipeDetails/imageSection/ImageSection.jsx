@@ -1,8 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { v4 as uuidv4 } from "uuid"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 import styles from './imageSection.module.css'
+import placeholderImg from '../../../assets/placeholderImgCard.jpg'
 
 const ImageSection = () => {
 
@@ -18,7 +21,7 @@ const ImageSection = () => {
   
   return (
     <section className={styles.imageSection}>
-      <img src={strMealThumb} alt="Recipe" loading='lazy'/>
+      <LazyLoadImage src={strMealThumb} alt="Recipe" placeholderSrc={placeholderImg} effect="blur" />
       <div className={styles.tagsContainer}>
         {
           tags?.map((tag) => {
