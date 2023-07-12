@@ -39,7 +39,7 @@ const SearchForm = () => {
         <h1>Recipes</h1>
         <div className={styles.searchInputContainer}>
             <form onSubmit={(e) => handleSearchResult(e)}>
-                <input value={searchTerm} onChange={(e) => handleSearchTerm(e)} type ="text" placeholder='Search recipes here ...' />
+                <input value={searchTerm} onChange={(e) => handleSearchTerm(e)} type ="text" placeholder='Hit enter to search...' />
                 <BsSearch className={styles.searchIcon} size = {20} />
             </form>
             <select value={filterBy === 'category' || filterBy === 'search' ? 'Filter by Cuisine' : undefined} onChange={(e) => dispatch(fetchRecipesByCusine(e.target.value))} name="filter" id="filter" className={styles.filter}>

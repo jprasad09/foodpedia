@@ -15,6 +15,13 @@ const RecipeList = () => {
   useEffect(() => {
     dispatch(fetchInitialRecipes())
   }, [])
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    })
+  }, [recipes])
 
   if(status === RECIPES_STATUSES.LOADING){
     return <MagnifyingGlass glassColor = 'white' color = 'black'/>

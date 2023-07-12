@@ -30,6 +30,13 @@ const RecipeDetails = () => {
 
   useEffect(() => {
     dispatch(fetchRecipesById(id))
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    })
+
     let arr = JSON.parse(localStorage.getItem(`${user?.email}`)) || []
     if(arr.length >= 1){
       for(let item of arr){

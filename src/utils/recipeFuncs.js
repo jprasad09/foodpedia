@@ -1,4 +1,5 @@
 export const saveRecipe = (recipe) => {
+  const { recipeId, name, image } = recipe
   let arr = JSON.parse(localStorage.getItem(`${recipe?.user?.email}`)) || []
   if(arr.length >= 1){
     for(let item of arr){
@@ -7,7 +8,7 @@ export const saveRecipe = (recipe) => {
       }
     }
   }
-  arr.push(recipe)
+  arr.push({ recipeId, name, image })
   localStorage.setItem(`${recipe?.user?.email}`, JSON.stringify(arr))
 }
 
