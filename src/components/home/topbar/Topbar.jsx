@@ -1,9 +1,10 @@
 import React from 'react'
+import { NavLink } from "react-router-dom"
+
 import styles from './topbar.module.css'
 import Navbar from '../../navbar/Navbar'
 import chef from '../../../assets/chef.png'
 import recipesHome from '../../../assets/recipesHome.png'
-import { NavLink } from "react-router-dom";
 
 const Topbar = () => {
   return (

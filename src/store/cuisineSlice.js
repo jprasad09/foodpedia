@@ -8,6 +8,7 @@ export const CUISINES_STATUSES = Object.freeze({
     LOADING: 'loading',
 })
 
+// fetching cuisines
 export const fetchCuisines = createAsyncThunk('cuisines/fetch', async () => {
     const { data: { meals } } = await axios.get(`${CUISINES_URL}`)
     return meals

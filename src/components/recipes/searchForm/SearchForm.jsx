@@ -1,37 +1,41 @@
 import React, { useEffect, useState } from 'react'
-import styles from './searchForm.module.css'
 import { BsSearch } from 'react-icons/bs'
-import { fetchRecipesByCusine, fetchRecipesBySearchTerm } from '../../../store/recipeSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import { v4 as uuidv4 } from "uuid"
+
+import styles from './searchForm.module.css'
+import { fetchRecipesByCusine, fetchRecipesBySearchTerm } from '../../../store/recipeSlice'
 import { fetchCuisines } from '../../../store/cuisineSlice'
 
 const SearchForm = () => {
 
-  const dispatch = useDispatch()
+  const [searchTerm, setSearchTerm] = useState("")
+  const [errorMsg, setErrorMsg] = useState("")
 
   const { cuisines } = useSelector((state) => state.cuisine)
   const { filterBy } = useSelector((state) => state.recipe)
 
-  const [searchTerm, setSearchTerm] = useState("")
-  const [errorMsg, setErrorMsg] = useState("")
+  const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(fetchCuisines())
   }, [])
 
+  // handling user behaviour and getting user's search term
   const handleSearchTerm = (e) => {
     e.preventDefault()
     if((e.target.value.replace(/[^\w\s]/gi, "")).length !== 0){
-      setSearchTerm(e.target.value);
+      setSearchTerm( prevState => e.target.value );
     } else {
-      setErrorMsg("Invalid search term ...")
+      setErrorMsg( prevState => "Invalid search term ..." )
     }
   }
 
+  // dispatching action to get recipes based on user's search term
   const handleSearchResult = (e) => {
     e.preventDefault()
     dispatch(fetchRecipesBySearchTerm(searchTerm))
-    setSearchTerm('')
+    setSearchTerm( prevState => '' )
   }
 
   return (
@@ -45,8 +49,8 @@ const SearchForm = () => {
             <select value={filterBy === 'category' || filterBy === 'search' ? 'Filter by Cuisine' : undefined} onChange={(e) => dispatch(fetchRecipesByCusine(e.target.value))} name="filter" id="filter" className={styles.filter}>
                 <option disabled>Filter by Cuisine</option>
                 {
-                  cuisines.map(({ strArea }, index) => {
-                    return <option key={index} value={strArea}>{strArea}</option>
+                  cuisines?.map(({ strArea }) => {
+                    return <option key={uuidv4()} value={strArea}>{strArea}</option>
                   })
                 }
             </select>

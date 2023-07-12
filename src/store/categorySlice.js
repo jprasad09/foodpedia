@@ -8,6 +8,7 @@ export const CATEGORIES_STATUSES = Object.freeze({
     LOADING: 'loading',
 })
 
+// fetching categories
 export const fetchCategories = createAsyncThunk('categories/fetch', async () => {
     const { data: { categories } } = await axios.get(`${CATEGORIES_URL}`)
     return categories;

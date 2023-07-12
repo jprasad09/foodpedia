@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from './navbar.module.css'
-import { NavLink } from "react-router-dom"
-import logo from '../../assets/logo.png'
+import { NavLink, useNavigate } from "react-router-dom"
 import { useAuth0 } from "@auth0/auth0-react"
-import { useNavigate } from 'react-router-dom'
+
+import styles from './navbar.module.css'
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
 

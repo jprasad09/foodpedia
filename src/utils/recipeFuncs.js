@@ -1,3 +1,4 @@
+// checking if recipe already in storage otherwise adding it in storage for particular user
 export const saveRecipe = (recipe) => {
   const { recipeId, name, image } = recipe
   let arr = JSON.parse(localStorage.getItem(`${recipe?.user?.email}`)) || []
@@ -12,6 +13,7 @@ export const saveRecipe = (recipe) => {
   localStorage.setItem(`${recipe?.user?.email}`, JSON.stringify(arr))
 }
 
+// removing recipe from storage for particular user
 export const deleteRecipe = (recipe) => {
   let arr = JSON.parse(localStorage.getItem(`${recipe?.user?.email}`)) || []
   if(arr.length >= 1){

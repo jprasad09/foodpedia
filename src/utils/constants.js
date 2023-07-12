@@ -1,3 +1,4 @@
+// constants to call apis
 export const CATEGORIES_URL = 'categories.php'
 export const CUISINES_URL = 'list.php?a=list'
 export const RECIPES_BY_CATEGORY_URL = "filter.php?c="

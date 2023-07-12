@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 export default axios.create({
-    baseURL: 'https://www.themealdb.com/api/json/v1/1/'
+    baseURL: import.meta.env.VITE_REACT_APP_API_BASE_URL
 });

@@ -7,13 +7,14 @@
 
 .imageSection img{
     height: 350px;
-    width: 400px;
+    min-width: 400px;
     border-radius: 15px 15px 0 0;
     margin-bottom: 10px;
 }
 
 .tagsContainer{
     display: flex;
+    flex-wrap: wrap;
     align-self: flex-end;
     margin: 0 5px;
 }
@@ -84,7 +85,7 @@
 @media only screen and (max-width: 800px) {
     .imageSection img{
         height: 180px;
-        width: 250px;
+        min-width: 250px;
     }
     .categoryAndCuisineDivContainer{
         padding: 30px 5px 10px;

@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Provider } from "react-redux"
+
 import Home from './pages/home/Home'
 import Recipes from './pages/recipes/Recipes'
 import RecipeDetails from './pages/recipeDetails/recipeDetails'
 import UserProfile from './pages/userProfile/userProfile'
-import { Provider } from "react-redux"
 import store from "./store"
 
 function App() {

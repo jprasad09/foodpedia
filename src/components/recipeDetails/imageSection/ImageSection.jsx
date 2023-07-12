@@ -1,26 +1,28 @@
 import React from 'react'
-import styles from './imageSection.module.css'
 import { useSelector } from 'react-redux'
+import { v4 as uuidv4 } from "uuid"
+
+import styles from './imageSection.module.css'
 
 const ImageSection = () => {
 
   const { singleRecipe : { strCategory, strArea, strMealThumb, strTags } } = useSelector((state) => state.recipe)
 
+  // converting string to array to get tags
   let tags = []
-
   strTags?.split(',').forEach(ele => {
     if(ele.length > 1){
       tags.push(ele)
     }
-  });
+  })
   
   return (
     <section className={styles.imageSection}>
-      <img src={strMealThumb} alt="Recipe" />
+      <img src={strMealThumb} alt="Recipe" loading='lazy'/>
       <div className={styles.tagsContainer}>
         {
-          tags?.map((tag, index) => {
-            return <span className={styles.tag} key={index}>{tag}</span>
+          tags?.map((tag) => {
+            return <span className={styles.tag} key={uuidv4()}>{tag}</span>
           })
         }
       </div>

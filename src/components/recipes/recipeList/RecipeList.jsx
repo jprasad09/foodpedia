@@ -1,20 +1,23 @@
 import React, { useEffect } from 'react'
+import { MagnifyingGlass } from 'react-loader-spinner'
+import { useDispatch, useSelector } from 'react-redux'
+
 import styles from './recipeList.module.css'
 import RecipeCard from './recipeCard/RecipeCard'
-import { useDispatch, useSelector } from 'react-redux'
 import { fetchInitialRecipes } from '../../../store/recipeSlice'
-import { MagnifyingGlass } from 'react-loader-spinner'
 import { RECIPES_STATUSES } from '../../../store/recipeSlice'
 
 const RecipeList = () => {
 
-  const dispatch = useDispatch()
-
   const { recipes, status } = useSelector((state) => state.recipe)
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(fetchInitialRecipes())
   }, [])
+  
+  // scrolling to top
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -23,6 +26,7 @@ const RecipeList = () => {
     })
   }, [recipes])
 
+  // showing loading animation while resolving or rejecting promise
   if(status === RECIPES_STATUSES.LOADING){
     return <MagnifyingGlass glassColor = 'white' color = 'black'/>
   }

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import styles from './recipes.module.css'
 import Navbar from '../../components/navbar/Navbar'
 import SearchForm from '../../components/recipes/searchForm/SearchForm'

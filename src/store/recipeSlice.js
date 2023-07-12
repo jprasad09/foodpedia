@@ -14,26 +14,31 @@ export const SINGLE_RECIPE_STATUSES = Object.freeze({
     LOADING: 'loading',
 })
 
+// fetching recipes based on category
 export const fetchRecipesByCategory = createAsyncThunk('recipes_by_category/fetch', async (category) => {
     const { data: { meals } } = await axios.get(`${RECIPES_BY_CATEGORY_URL}${category}`)
     return meals;
 })
 
+// fetching recipes based on cuisine
 export const fetchRecipesByCusine = createAsyncThunk('recipes_by_cusine/fetch', async (cuisine) => {
     const { data: { meals } } = await axios.get(`${RECIPES_BY_CUSINE_URL}${cuisine}`)
     return meals;
 })
 
+// fetching recipes to show initially when application loads
 export const fetchInitialRecipes = createAsyncThunk('initial_recipes/fetch', async () => {
     const { data: { meals } } = await axios.get(`${RECIPES_BY_CATEGORY_URL}Beef`)
     return meals;
 })
 
+// fetching recipes based on user's search value
 export const fetchRecipesBySearchTerm = createAsyncThunk('recipes_by_search_term/fetch', async (searchTerm) => {
     const { data: { meals } } = await axios.get(`${SEARCH_URL}${searchTerm}`)
     return meals;
 })
 
+// fetching singlr recipe by id
 export const fetchRecipesById = createAsyncThunk('recipes_by_id_fetch', async (id) => {
     const { data: { meals } } = await axios.get(`${RECIPE_BY_ID_URL}${id}`)
     return meals[0];
