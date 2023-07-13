@@ -11,6 +11,7 @@ const SearchForm = () => {
 
   const [searchTerm, setSearchTerm] = useState("")
   const [errorMsg, setErrorMsg] = useState("")
+  const [cuisineFilter, setCuisineFilter] = useState(undefined)
 
   const { cuisines } = useSelector((state) => state.cuisine)
   const { filterBy } = useSelector((state) => state.recipe)
@@ -25,7 +26,7 @@ const SearchForm = () => {
   const handleSearchTerm = (e) => {
     e.preventDefault()
     if((e.target.value.replace(/[^\w\s]/gi, "")).length !== 0){
-      setSearchTerm( prevState => e.target.value );
+      setSearchTerm( prevState => e.target.value )
     } else {
       setErrorMsg( prevState => "Invalid search term ..." )
     }
@@ -46,7 +47,14 @@ const SearchForm = () => {
                 <input value={searchTerm} onChange={(e) => handleSearchTerm(e)} type ="text" placeholder='Hit enter to search...' />
                 <BsSearch className={styles.searchIcon} size = {20} />
             </form>
-            <select value={filterBy === 'category' || filterBy === 'search' ? 'Filter by Cuisine' : undefined} onChange={(e) => dispatch(fetchRecipesByCusine(e.target.value))} name="filter" id="filter" className={styles.filter}>
+            <select value={filterBy === 'category' || filterBy === 'search' ? 'Filter by Cuisine' : cuisineFilter} 
+                name="filter" 
+                id="filter" 
+                className={styles.filter}
+                onChange={(e) => {
+                  setCuisineFilter(e.target.value)
+                  dispatch(fetchRecipesByCusine(e.target.value))
+                }}>
                 <option disabled>Filter by Cuisine</option>
                 {
                   cuisines?.map(({ strArea }) => {
