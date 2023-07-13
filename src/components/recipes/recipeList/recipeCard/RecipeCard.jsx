@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import 'react-lazy-load-image-component/src/effects/blur.css'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import styles from './recipeCard.module.css'
@@ -56,10 +56,6 @@ const RecipeCard = ({ recipeId, name, image }) => {
 
   return (
     <div className={styles.recipeCard}>
-        <ToastContainer 
-          position="top-center"
-          autoClose={2000}
-        />
         <LazyLoadImage src={image} alt="Recipe" placeholderSrc={placeholderImg} effect="blur" />
         <h3>{name}</h3>
         <div className={styles.buttonContainer}>

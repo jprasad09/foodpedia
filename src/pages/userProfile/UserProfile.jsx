@@ -1,5 +1,7 @@
 import React from 'react'
 import { useAuth0 } from "@auth0/auth0-react"
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import styles from './userProfile.module.css'
 import Navbar from '../../components/navbar/Navbar'
@@ -13,6 +15,10 @@ const UserProfile = () => {
   
   return (
     <section className={styles.userProfileContainer}>
+      <ToastContainer 
+        position="top-center"
+        autoClose={2000}
+      />
 
       <Navbar />
 
